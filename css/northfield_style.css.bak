@@ -1,0 +1,192 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video, content {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	background-image: url(../img/brown152.jpg);
+
+
+
+	
+}
+/* new clearfix */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+
+.clearfix {display: inline-block;}  /* for IE/Mac */
+
+.clearfix {
+    zoom: 1;     /* triggers hasLayout */
+    display: block;     /* resets display for IE/Win */
+    }  /* Only IE can see inside the conditional comment
+    and read this CSS rule. Don't ever use a normal HTML
+    comment inside the CC or it will close prematurely. */
+
+
+
+
+#wrapper {
+	background-color:#FFF;
+	margin: 20px auto;
+	width: 1000px;
+	min-height: 600px;
+	/*border: solid 1px red;*/
+}
+
+#header {
+	width: 985px;
+	min-height: 200px;
+	position: relative;
+}
+
+#logo {
+	margin-left: 3px;
+}
+
+#tree {
+	width: 200px;
+	position: absolute;
+	top: 0px;
+	right: -15px;
+	min-height: 175px;
+	
+	
+}
+/* Side Navigation */
+#nav {
+	width: 175px;
+	min-height: 600px;
+	background-color: #000;
+	border: solid 1px purple;
+	float: left;
+	margin-top: 10px;
+}
+
+#nav ul {
+	width: 100%;
+	/*border: solid 1px green;*/
+	
+	
+	
+}
+
+#nav ul li {
+	list-style-type: none;
+	padding-top: 15px;
+	text-align: center;
+}
+
+#nav ul li a {
+	color: #ffff99;
+	font-family: 'CrimsonSemibold';
+	font-size: 25px;
+	text-decoration: none;
+	
+}
+
+/*MAIN PAGE*/
+
+#main {
+	width: 785px;
+	margin-left: 200px;
+	padding-top: 10px;
+	min-height: 600px;
+	border-right: 15px solid #cc9933;
+	
+}
+/*STUFF FOR INDEX PAGE*/
+#main .mainimg {
+	width: 700px;
+	margin-left: 43px;
+}
+
+#main .maintext {
+	width: 700px;
+	margin-left: 43px;
+	/*border: 1px solid black;*/
+}
+
+#main .maintext ul {
+	margin-top: 10px;	
+}
+#main .maintext li {
+	width: 200px;
+	float: left;
+	margin-right: 30px;
+	list-style: none;
+	font-family:Arial, Helvetica, sans-serif;
+	color: #336633;
+}
+
+
+
+/*STUFF FOR ABOUT PAGE*/
+
+#main #about_images {
+	width: 700px;
+	min-height: 235px;
+	margin: 0 auto;
+	/*border: solid 1px orange;*/
+
+}
+
+
+#main  #about_images ul {
+	width: 100%;
+	/*border: solid 1px green;*/
+	
+}
+
+
+#main  #about_images ul li.aboutimg {
+	width: 200px;
+	height: 200px;
+	margin-left: 22px;
+	/*border: solid 1px blue;*/
+	float: left;
+	list-style-type: none;
+	-webkit-box-shadow: 3px 3px 1px 2px #666666;
+	-moz-box-shadow: 3px 3px 1px 2px #666666;
+	box-shadow: 3px 3px 1px 2px #666666;
+
+}
+
+#main .abouttext {
+	width: 650px;
+	/*border: solid 1px red;*/
+	margin: 0 auto;
+
+}
+
+#main .abouttext p {
+	font-family: Arial, sans-serif;
+	padding-top: 12px;
+	color: #336633;
+
+
+}
+
+#footer {
+	width: 100%;
+	height:  30px;
+	background-color: #cc9933;
+	color: #fff;
+	clear: right;
+	
+}

@@ -1,0 +1,534 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Northfield Cabinet Mobile</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+    <meta name="apple-mobile-web-app-capable" content="yes" /> 
+	
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+    <link rel="stylesheet" href="themes/ncs_theme.min.css" />
+  	<link rel="stylesheet" href="jquery-mobile.css" />
+    <link rel="stylesheet" href="photoswipe.css" />
+    
+    
+    <script src="lib/klass.min.js"></script>
+
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+
+    <script src="code.photoswipe.jquery-3.0.4.min.js"></script>
+    <script src="jquery.validate.js"></script>
+    <script src="valid.js"></script>
+
+
+
+<script type="text/javascript">
+
+	/*
+
+		 * IMPORTANT!!!
+
+		 * REMEMBER TO ADD  rel="external"  to your anchor tags. 
+
+		 * If you don't this will mess with how jQuery Mobile works
+
+		 */
+
+		(function(window, $, PhotoSwipe){
+
+			$(document).ready(function(){
+
+				$('div.gallery-page')
+
+					.live('pageshow', function(e){
+
+						var 
+
+							currentPage = $(e.target),
+
+							options = {},
+
+							photoSwipeInstance = $("ul.gallery a", e.target).photoSwipe(options,  currentPage.attr('id'));
+
+						return true;
+
+					})
+
+					.live('pagehide', function(e){
+
+						var 
+
+							currentPage = $(e.target),
+
+							photoSwipeInstance = PhotoSwipe.getInstance(currentPage.attr('id'));
+
+
+
+						if (typeof photoSwipeInstance != "undefined" && photoSwipeInstance != null) {
+
+							PhotoSwipe.detatch(photoSwipeInstance);
+
+						}
+
+						return true;
+
+					});
+
+			});
+
+			}(window, window.jQuery, window.Code.PhotoSwipe));
+
+
+
+</script>
+
+<script>
+$(document).ready(function() {
+	$("#the_form").validate();
+});
+</script>
+	
+</head> 
+<body> 
+
+<!-- Start of first page: #Home -->
+<div data-role="page" id="Home" data-theme="a">
+
+	<div data-role="header" style="text-align:center">
+	<img src="images/NCS_Logo.gif" width="241" height="170">
+	 <div data-role="navbar" data-theme="A">
+	<ul>
+		<li><a href="#about">About</a></li>
+		<li><a href="#slideshows">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+	</ul>
+	</div><!-- /navbar -->
+    </div><!-- /header -->
+	
+	<div data-role="content" >	
+  	<div>
+       <img style="width: 350px; height: 229px" src="images/hall_index1.jpg" />
+    </div>
+
+	 <p>Northfield Cabinet Shop is a family-owned business located in northern Wisconsin that has been providing quality custom cabinetry for over 60 years. Our projects are uniquely designed, hand-crafted, and finely tailored to fit your individual needs.   <em>Nothing</em> is pre-fabricated.  We'll work with you from start to finish to create pieces that will set your home apart and last a lifetime.  Check out our <a href="#slideshows">gallery</a> for examples of our finished work, and find us on <a href="http://www.facebook.com/pages/Northfield-Cabinet-Shop/149174731883170" target="_blank">Facebook</a> to see our projects-in-progress. </p>
+	</div> <!--end content-->
+	
+   <div data-role="footer" data-theme="a">
+    <p>9182 Old Highway 45 Conover, WI 54544 <br> (715) 547-6262</p>
+   <div data-role="navbar">
+	<ul>
+		<li><a href="#Home" data-icon="home"></a></li>
+	</ul>
+    </div>
+	</div><!-- /footer -->
+</div><!-- /home page -->
+
+
+<!-- Start of first page: #about -->
+<div data-role="page" id="about" data-theme="a">
+
+	<div data-role="header" style="text-align:center">
+	<img src="images/NCS_Logo.gif" width="241" height="170">
+	
+    <div data-role="navbar">
+	<ul>
+		<li><a href="#about" class="ui-btn-active">About</a></li>
+		<li><a href="#slideshows">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+	</ul>
+	</div><!-- /navbar -->
+    </div><!-- /header -->
+
+	<div data-role="content" >	
+	
+     <div style="text-align:center">
+       <img style="width: 300px; height: 300px" src="images/sign.jpg" />
+    </div>
+    
+	<p>As a means of introduction, owner Michael Maillette apprenticed cabinet making under his father, Ted Maillette, who established Northfield Cabinet Shop in 1948 in Northfield, Illinois, a northern suburb of Chicago. Northfield Cabinet Shop built custom cabinetry for over 30 years in the Chicago North Shore and downtown Chicago areas before making a transition to Conover, WI in 1981.  Michael became owner of the business in 1989 and has had the distinct pleasure of working with Daniel Benson Builders in Land O' Lakes, WI for the past 20 years.  A number of Daniel's homes have been featured in multiple issues of <em>Log Home Living</em>, <em>Log Home Illustrated</em>, and <em>Log Home Design Ideas</em> in which our cabinetry was also highlighted.</p>
+	
+	</div> <!--end content-->
+	
+	 <div data-role="footer" data-theme="a">
+    <p>9182 Old Highway 45 Conover, WI 54544 <br> (715) 547-6262</p>
+   <div data-role="navbar">
+	<ul>
+		<li><a href="#Home" data-icon="home"></a></li>
+	</ul>
+    </div>
+	</div><!-- /footer -->
+</div><!-- /end About -->
+
+
+<!-- Start of second page: #slideshows -->
+<div data-role="page" id="slideshows" data-theme="a">
+
+	<div data-role="header" style="text-align:center">
+	<img src="images/NCS_Logo.gif" width="241" height="170">
+	<div data-role="navbar">
+	<ul>
+		<li><a href="#about">About</a></li>
+		<li><a href="#slideshows" class="ui-btn-active">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+	</ul>
+	</div><!-- /navbar -->	
+    
+    </div><!-- /header -->
+
+	<div data-role="content" data-theme="a">
+    <h1 style="text-align:center">Northfield Cabinet Shop Gallery</h1>
+        
+		<ul data-role="listview" data-theme="a">
+        	<li><a href="#dam"><img src="images/thumb/hall1.jpg" alt="Dam Lake"  width="150" height="150">Dam Lake, WI</a></li>
+            <li><a href="#threelakes"><img src="images/thumb/maho1.jpg" alt="Three Lakes"  width="150" height="150">Three Lakes, WI</a></li>
+            <li><a href="#homan"><img src="images/thumb/mey1.jpg" alt="Homan Lake"  width="150" height="150">Homan Lake, MI</a></li>
+            <li><a href="#musky"><img src="images/thumb/musk1.jpg" alt="Musky Island"  width="150" height="150">Musky Island, CANADA</a></li>
+            <li><a href="#hardin"><img src="images/thumb/ul1.jpg" alt="Hardin Lake"  width="150" height="150">Hardin Lake, WI</a></li>
+            <li><a href="#mamie"><img src="images/thumb/gu1.jpg" alt="Mamie Lake" width="150" height="150">Mamie Lake, WI</a></li>
+        </ul>
+	</div><!-- /content -->
+
+	
+	 <div data-role="footer" data-theme="a">
+    <p>9182 Old Highway 45 Conover, WI 54544 <br> (715) 547-6262</p>
+   <div data-role="navbar">
+	<ul>
+		<li><a href="#Home" data-icon="home"></a></li>
+	</ul>
+    </div>
+	</div><!-- /footer -->
+
+</div><!-- /end #slideshows -->
+
+
+<!-- Start of third page: #Gallery1 -->
+<div data-role="page" data-add-back-btn="true" id="dam" class="gallery-page">
+	
+    <div data-role="header">
+		<h1>Dam Lake</h1>
+
+	</div>
+	
+    <div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/hall1.jpg" rel="external"><img src="images/thumb/hall1.jpg" alt="Kitchen with knotty alder" width="150" height="150" /></a></li>
+
+			<li><a href="images/full/hall3.jpg" rel="external"><img src="images/thumb/hall3.jpg" alt="Kitchen island with granite top" width="150" height="150" /></a></li>
+
+			<li><a href="images/full/hall8.jpg" rel="external"><img src="images/thumb/hall8.jpg" alt="refrigerator door with knotty alder and natural finish" width="150" height="150" /></a></li>
+
+			<li><a href="images/full/hall11.jpg" rel="external"><img src="images/thumb/hall11.jpg" width="150" height="150" /></a></li>
+
+			<li><a href="images/full/hall17.jpg" rel="external"><img src="images/thumb/hall17.jpg" alt="Bathroom vanity: distressed pine and bead and bark details" width="150" height="150" /></a></li>
+
+			<li><a href="images/full/hall18.jpg" rel="external"><img src="images/thumb/hall18.jpg" width="150" height="150"/></a></li>
+
+		</ul>
+	</div> <!--end content-->
+
+	 <div data-role="footer" data-theme="a">
+    <p>9182 Old Highway 45 Conover, WI 54544 <br> (715) 547-6262</p>
+   <div data-role="navbar">
+	<ul>
+		<li><a href="#Home" data-icon="home"></a></li>
+	</ul>
+    </div>
+	</div><!-- /footer -->
+</div> <!--end Gallery1-->
+
+
+<!-- Start of third page: #Gallery2 -->
+<div data-role="page" data-add-back-btn="true" id="threelakes" class="gallery-page">
+	
+    <div data-role="header">
+		<h1>Three Lakes</h1>
+
+	</div>
+	
+    <div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/maho1.jpg" rel="external"><img src="images/thumb/maho1.jpg" alt="Kitchen" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/maho2.jpg" rel="external"><img src="images/thumb/maho2.jpg" alt="Fitted farm sink base: Red-painted kitchen with pickle barrel tops" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/maho3.jpg" rel="external"><img src="images/thumb/maho3.jpg" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/maho4.jpg" rel="external"><img src="images/thumb/maho4.jpg" alt="Bathroom vanity: Natural barnwood with pickle barrel tops" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/maho5.jpg" rel="external"><img src="images/thumb/maho5.jpg" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/maho6.jpg" rel="external"><img src="images/thumb/maho6.jpg" width="150" height="150"/></a></li>
+
+		</ul>
+	</div> <!--end content-->
+
+	 <div data-role="footer" data-theme="a">
+    <p>9182 Old Highway 45 Conover, WI 54544 <br> (715) 547-6262</p>
+   <div data-role="navbar">
+	<ul>
+		<li><a href="#Home" data-icon="home"></a></li>
+	</ul>
+    </div>
+	</div><!-- /footer -->
+</div> <!--end Gallery2-->
+
+
+<!-- Start of third page: #Gallery3 -->
+<div data-role="page" data-add-back-btn="true" id="homan" class="gallery-page">
+	
+    <div data-role="header">
+		<h1>Homan Lake</h1>
+
+	</div>
+	
+    <div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/mey1.jpg" rel="external"><img src="images/thumb/mey1.jpg" alt="Bathroom vanity with marble top" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/mey2.jpg" rel="external"><img src="images/thumb/mey2.jpg" alt="Fully-integrated bathroom cabinetry" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/mey3.jpg" rel="external"><img src="images/thumb/mey3.jpg" alt="Kitchen: Knotty alder with natural finish" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/mey4.jpg" rel="external"><img src="images/thumb/mey4.jpg" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/mey5.jpg" rel="external"><img src="images/thumb/mey5.jpg" width="150" height="150" /></a></li>
+
+			<li><a href="images/full/mey6.jpg" rel="external"><img src="images/thumb/mey6.jpg" width="150" height="150" /></a></li>
+
+		</ul>
+	</div> <!--end content-->
+
+	 <div data-role="footer" data-theme="a">
+    <p>9182 Old Highway 45 Conover, WI 54544 <br> (715) 547-6262</p>
+   <div data-role="navbar">
+	<ul>
+		<li><a href="#Home" data-icon="home"></a></li>
+	</ul>
+    </div>
+	</div><!-- /footer -->
+</div> <!--end Gallery3-->
+
+
+<!-- Start of third page: #Gallery4 -->
+<div data-role="page" data-add-back-btn="true" id="musky" class="gallery-page">
+	
+    <div data-role="header">
+		<h1>Musky Island, Canada</h1>
+
+	</div>
+	
+    <div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/musk1.jpg" rel="external"><img src="images/thumb/musk1.jpg" alt="Main kitchen: Pine with granite tops" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/musk2.jpg" rel="external"><img src="images/thumb/musk2.jpg" alt="bar" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/musk3.jpg" rel="external"><img src="images/thumb/musk3.jpg" alt="Pine bar cabinets with hand-carved branches" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/musk4.jpg" rel="external"><img src="images/thumb/musk4.jpg" alt="Loft captain's bed with drawers and side tables" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/musk5.jpg" rel="external"><img src="images/thumb/musk5.jpg" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/musk6.jpg" rel="external"><img src="images/thumb/musk6.jpg" alt="Cookline and sink with raised bar top" width="150" height="150"/></a></li>
+
+		</ul>
+	</div> <!--end content-->
+
+	 <div data-role="footer" data-theme="a">
+    <p>9182 Old Highway 45 Conover, WI 54544 <br> (715) 547-6262</p>
+   <div data-role="navbar">
+	<ul>
+		<li><a href="#Home" data-icon="home"></a></li>
+	</ul>
+    </div>
+	</div><!-- /footer -->
+</div> <!--end Gallery4-->
+
+
+<!-- Start of third page: #Gallery5 -->
+<div data-role="page" data-add-back-btn="true" id="hardin" class="gallery-page">
+	
+    <div data-role="header">
+		<h1>Hardin Lake</h1>
+
+	</div>
+	
+    <div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/ul1.jpg" rel="external"><img src="images/thumb/ul1.jpg" alt="Kitchen with knotty pine panel doors and drawers framed by natural lyptus" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/ul2.jpg" rel="external"><img src="images/thumb/ul2.jpg" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/ul3.jpg" rel="external"><img src="images/thumb/ul3.jpg" alt="Kitchen island with granite tops" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/ul4.jpg" rel="external"><img src="images/thumb/ul4.jpg" alt="vanity" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/ul5.jpg" rel="external"><img src="images/thumb/ul5.jpg" alt="Vanity with open shelf style" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/ul6.jpg" rel="external"><img src="images/thumb/ul6.jpg" width="150" height="150"/></a></li>
+
+		</ul>
+	</div> <!--end content-->
+
+	 <div data-role="footer" data-theme="a">
+    <p>9182 Old Highway 45 Conover, WI 54544 <br> (715) 547-6262</p>
+   <div data-role="navbar">
+	<ul>
+		<li><a href="#Home" data-icon="home"></a></li>
+	</ul>
+    </div>
+	</div><!-- /footer -->
+</div> <!--end Gallery5-->
+
+
+<!-- Start of: #Gallery6 -->
+<div data-role="page" data-add-back-btn="true" id="mamie" class="gallery-page">
+	
+    <div data-role="header">
+		<h1>Mamie Lake, WI</h1>
+
+	</div>
+	
+    <div data-role="content">	
+		<ul class="gallery">
+			<li><a href="images/full/gu1.jpg" rel="external"><img src="images/thumb/gu1.jpg" alt="Kitchen island with distressed pine top" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/gu2.jpg" rel="external"><img src="images/thumb/gu2.jpg" alt="Table vanity: douglas fir" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/gu3.jpg" rel="external"><img src="images/thumb/gu3.jpg" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/gu4.jpg" rel="external"><img src="images/thumb/gu4.jpg" alt="Bathroom vanity with furniture base and granite top" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/gu5.jpg" rel="external"><img src="images/thumb/gu5.jpg" alt="Painted alder vanity" width="150" height="150"/></a></li>
+
+			<li><a href="images/full/gu6.jpg" rel="external"><img src="images/thumb/gu6.jpg" alt="Laundry room cabinets with cracked paint finish" width="150" height="150"/></a></li>
+
+		</ul>
+	</div> <!--end content-->
+
+	 <div data-role="footer" data-theme="a">
+    <p>9182 Old Highway 45 Conover, WI 54544 <br> (715) 547-6262</p>
+   <div data-role="navbar">
+	<ul>
+		<li><a href="#Home" data-icon="home"></a></li>
+	</ul>
+    </div>
+	</div><!-- /footer -->
+</div> <!--end Gallery6-->
+
+
+<!--start: contact page -->
+<div data-role="page" id="contact" data-theme="a">
+
+	<div data-role="header" style="text-align:center">
+	<img src="images/NCS_Logo.gif" width="241" height="170">
+	<div data-role="navbar">
+	<ul>
+		<li><a href="#about">About</a></li>
+		<li><a href="#slideshows">Gallery</a></li>
+        <li><a href="#contact" class="ui-btn-active">Contact</a></li>
+	</ul>
+	</div><!-- /navbar -->
+    </div><!-- /header -->
+	
+	 <div data-role="content">
+             <form action="sendmail.php" method="post" id="contactForm" name="the_form">
+            <div data-role="fieldcontain">
+               <label for="name">Full Name*</label>
+                <input id="name" name="name" class="required" minlength="2" />
+                </div>
+            
+            <div data-role="fieldcontain">
+           
+              <label for="cemail">E-Mail*</label>
+			<input id="cemail" name="email" class="required email"/>
+            </div>
+            
+            <div data-role="fieldcontain">
+               <label for="phone">Phone Number* (999-999-9999)</label>
+			<input id="phone" name="phone" class="required" />
+            </div>
+            
+            <div data-role="fieldcontain">
+            <label for="comments">Your Message*</label>
+			<textarea id="comments" name="comments" class="required"></textarea>
+            </div>
+            
+                   
+                <div data-role="fieldcontain">
+                    <label for="clientselect">
+                        Which best describes you as a client?
+                    </label>
+                    <select name="client" id="client" data-theme="a">
+                     	<option value="none">
+                            Choose one
+                        </option>
+                        <option value="homeowner">
+                            Homeowner
+                        </option>
+                        <option value="contractor">
+                            Contractor
+                        </option>
+                        <option value="architect">
+                            Architect
+                        </option>
+                        <option value="designer">
+                            Interior Designer
+                        </option>
+                        <option value="other">
+                            Other
+                        </option>
+                    </select>
+                </div>
+                
+                <input type="submit" data-theme="a" data-icon="star" data-iconpos="right" value="Send"/>
+                </form>
+            </div> <!--end content-->
+     <div data-role="footer" data-theme="a">
+    <p>9182 Old Highway 45 Conover, WI 54544 <br> (715) 547-6262</p>
+   <div data-role="navbar">
+	<ul>
+		<li><a href="#Home" data-icon="home"></a></li>
+	</ul>
+    </div>
+	</div><!-- /footer -->
+</div><!-- /end contact -->
+
+
+<!--start: thankyou page -->
+<div data-role="page" id="thankyou" data-theme="a">
+
+	<div data-role="header" style="text-align:center">
+	<img src="images/NCS_Logo.gif" width="241" height="170">
+	<div data-role="navbar">
+	<ul>
+		<li><a href="#about">About</a></li>
+		<li><a href="#slideshows">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+	</ul>
+	</div><!-- /navbar -->
+    </div><!-- /header -->
+	
+	 <div data-role="content">
+             
+     <h3>Thanks for contacting us.  We'll be in touch.</h3>
+           
+     </div> 
+	 <!--end content-->
+   <div data-role="footer" data-theme="a">
+    <p>9182 Old Highway 45 Conover, WI 54544 <br> (715) 547-6262</p>
+   <div data-role="navbar">
+	<ul>
+		<li><a href="#Home" data-icon="home"></a></li>
+	</ul>
+    </div>
+	</div><!-- /footer -->
+</div><!-- /end thankyou -->
+
+
+
+
+
+</body>
+</html>
