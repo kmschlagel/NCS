@@ -24,11 +24,11 @@ var mygallery=new fadeSlideShow({
 	wrapperid: "fadeshow1", //ID of blank DIV on page to house Slideshow
 	dimensions: [700, 525], //width/height of gallery in pixels. Should reflect dimensions of largest image
 	imagearray: [
-		["img/indexphotos/1.jpg", "uhlein.html", "", "Kitchen with knotty pine and amber finish"],
+		["img/indexphotos/1.jpg", "hardin.html", "", "Kitchen with knotty pine and amber finish"],
 		["img/indexphotos/2.jpg",  "musky.html", "", "Patio bar and grill with cedar"],
-		["img/indexphotos/3.jpg",  "meyers.html", "", "Bathroom vanity painted Pearl" ],
-		["img/indexphotos/4.jpg",  "mahoney.html", "", "Kitchen with maple and red stain"],
-		["img/indexphotos/5.jpg",  "hallway.html", "", "Kitchen in knotty pine with natural finish"],
+		["img/indexphotos/3.jpg",  "homan.html", "", "Bathroom vanity painted Pearl" ],
+		["img/indexphotos/4.jpg",  "julia.html", "", "Kitchen with maple and red stain"],
+		["img/indexphotos/5.jpg",  "dam.html", "", "Kitchen in knotty pine with natural finish"],
 		["img/indexphotos/6.jpg",  "mamie.html", "", "Kitchen in knotty pine with natural finish"] //<--no trailing comma after very last image element!
 	],
 	displaymode: {type:'auto', pause:3000, cycles:0, wraparound:false},
@@ -59,10 +59,12 @@ var mygallery=new fadeSlideShow({
 <body class="gradient" onload="openSubMenu(); closeubMenu()">
 <div id="wrapper">
 
-<div id="header" class="clearfix"> 
-<div id="logo">
-   	<a href="index.php"><img src="img/logo.gif" width="241" height="170" alt="northfield cabinet logo"></a>
-</div> <!--end logo div-->
+<div id="header" class="clearfix">
+	<!-- start logo -->
+	<div id="logo">
+		<a href="index.html"><img class="padding-left-15" src="img/logo.gif" width="241" height="170" alt="northfield cabinet logo"></a>
+	</div>
+	<!--end logo -->
 
 <div id="nav">
 	<ul class="myMenu">
